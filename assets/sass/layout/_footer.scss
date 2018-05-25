@@ -1,0 +1,108 @@
+.footer {
+    position:relative;
+    background: url('/graphics/footer-bg.png');
+    background-color: $copper;
+    padding: 50px 0;
+}
+
+.footer--has-bg {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.footer-navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    &__item {
+        display: inline-block;
+        padding: 0 14px;
+        position: relative;
+    }
+}
+
+.footer-navigation__link {
+    font-family: $base-font;
+    color: $light-brown;
+    text-transform: uppercase;     
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.footer-navigation > .footer-navigation__item {
+    &:after {
+        content: '|';
+        font-size: 12px;
+        position: absolute;
+        right: -3px;
+        color: $light-brown;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    &:last-child:after {
+        content: '';
+    }
+}
+
+.footer__credits {
+    color: $light-brown;
+}
+
+.footer-blog-item__heading {
+    font-weight: 200;
+    color: $mid-white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.footer-blog-item__summary {
+    font-weight: 200;
+    color: $mid-white;
+    font-size: 16px;
+}
+
+.footer-contact-item__heading {
+    font-weight: 200;
+    color: $mid-white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.footer-contact-item__summary {
+    font-weight: 200;
+    color: $mid-white;
+    font-size: 16px;
+}
+
+.footer-contact-item__summary--phone {
+    position: relative;
+    font-size: 21px;
+    padding-left: 23px;
+
+    &:before {
+        content: '\f095';
+        font-family: FontAwesome;
+        top: 1px;
+        position: absolute;
+        left: 2px;
+    }
+}
+
+.footer--grunge {
+    position: absolute;
+    margin-top: -62px;
+
+    img{
+        max-width: 90%;
+    }
+}

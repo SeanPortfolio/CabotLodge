@@ -1,0 +1,134 @@
+.review-section__container {
+    margin: 22px auto;
+    color: $brown;
+    padding: 0;
+}
+
+.review-item {
+    position: relative;
+    margin-top: 70px;
+    color: $brown;
+
+    .fa {
+        font-size: 30px;
+        position: absolute;
+        float: left;
+    }
+    .btn--full-brown-ghost {
+        margin-top: 70px;
+        margin-left: 45px;
+    }
+}
+
+.review-content {
+    font-size: 26px;
+    font-weight: 200;
+}
+
+.review-content, .review-person {
+    padding: 0 50px;
+}
+
+.review-item--slick {
+    margin-bottom: 25px;
+    outline: none;
+
+    .slick-dots {
+        position: absolute;
+        top: 195px;
+        left: 0;
+        right: 0;
+        transform: translateX(-180px);
+        text-align: center;
+    
+        li {
+            position: relative;
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            margin: 0 5px;
+            padding: 0;
+            cursor: pointer;
+    
+            button {
+                background: transparent;
+                border-radius: 60%;
+                height: 1px;
+                width: 1px;
+                border: 1px solid $brown;
+                display: block;
+                height: 10px;
+                width: 10px;
+                outline: none;
+                line-height: 0px;
+                font-size: 0px;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .slick-active {
+            button {
+                background: $brown;
+            }
+        }
+    }
+}
+
+.slick-active {
+    img {
+        transform: scale(1, 1);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .review-page {
+        .review-content {
+            padding: 0;
+        }
+
+        blockquote {
+            margin: 0;
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    .review-item--slick {
+        .slick-dots {
+            top: 220px;
+            transform: translateX(-133px); 
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .review-item--slick {
+        .slick-dots {
+            bottom: 0;
+            transform: none;
+            top: unset;
+        }
+    }
+
+    .review-item {
+        text-align: center;
+
+        .fa {
+            position: relative;
+            float: none;
+        }
+        .btn--full-brown-ghost {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    .review-section__container {
+        img {
+            margin: 0 auto;
+            max-width: 25%;
+        }
+    }
+}

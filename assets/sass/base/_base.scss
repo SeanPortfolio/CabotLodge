@@ -1,0 +1,103 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  
+}
+
+body {
+
+}
+
+html:not(.is-mobile-device) {
+  body {
+
+  }
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-ms-selection { 
+	
+}
+
+::-moz-selection { 
+	
+}
+
+::-webkit-selection { 
+	
+}
+::selection { 
+	
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.zoom {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    -moz-transform: scale(1.1) !important;
+    -webkit-transform: scale(1.1) !important;
+    transform: scale(1.1) !important;
+  }
+}

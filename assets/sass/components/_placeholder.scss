@@ -1,0 +1,12 @@
+.newsletter--input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $mid-white;
+}
+.newsletter--input::-moz-placeholder { /* Firefox 19+ */
+    color: $mid-white;
+}
+.newsletter--input:-ms-input-placeholder { /* IE 10+ */
+    color: $mid-white;
+}
+.newsletter--input:-moz-placeholder { /* Firefox 18- */
+    color: $mid-white;
+}

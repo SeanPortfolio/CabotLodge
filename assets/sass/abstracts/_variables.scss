@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// FONTS DIR PATH
+$fonts-dir-path: '../fonts' !default;
+
+// ICON FONTS DIR PATH
+$icon-fonts-dir-path: $fonts-dir-path + '/icons' !default;
+
+// TEXT FONTS DIR PATH
+$text-fonts-dir-path: $fonts-dir-path + '/typography' !default;
+
+// GRAPHICS DIR PATH
+$graphics-dir-path: '../../graphics' !default;
+
+// COLORS
+$white: #ffffff;
+$light-white: #e5e2de;
+$mid-white: #e9e4df;
+$ultra-light-grey: #f1ede4;
+$light-grey: #f7f5f1;
+$medium-grey: #5c6059;
+$dark-grey: #4f4e4e;
+$black: #2d2a27;
+
+$lighter-brown: #f3efec;
+$light-brown: #b29988;
+$medium-brown: #8f6a52;
+$brown: #5f2b0f;
+
+$copper: #87311e;
+
+$base-font-size: 18px;
+$base-line-height: 1.4;
+$base-font: 'Balthazar', serif;
+$base-color: $black;
+
+$default-font-size: 18px;
+$default-line-height: 1.4;
+$default-font: 'Muli', serif;
+$default-color: $black;
+
+// Colours
+$gold: #9b8663;
+
+// Font

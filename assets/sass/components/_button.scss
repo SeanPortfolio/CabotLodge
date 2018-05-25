@@ -1,0 +1,275 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+[href],
+[type="button"],
+[type="submit"],
+button {
+  cursor: pointer;  
+}
+
+.btn,
+.link {
+  display: inline-block;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  
+}
+
+.btn {
+  font-family: $base-font;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  min-width: 150px;
+
+  i {
+    font-size: 22px;
+    vertical-align: text-top;
+    margin: 0 5px 0 5px;
+  }
+
+  &:before{
+		font-family: 'fontawesome';
+		content: '\f061';
+		position: absolute;
+	  height: 100%;
+	  font-size: 14px;
+	  transition: all 0.3s;
+	  right: 0;
+	  top: 0px;
+	  opacity: 0;
+	  font-weight: 100;
+	}
+
+
+    &:hover{
+    	&:before{
+    		right: 15px;
+    		opacity: 1;
+    	}
+    }
+}
+
+.btn--xs {
+  min-width: 185px;
+}
+
+.btn--sm {
+  min-width: 215px;
+}
+
+.btn--md {
+  min-width: 250px;
+}
+
+.btn--lg {
+  min-width: 285px;
+}
+
+.btn--xl {
+  min-width: 315px;
+}
+
+.btn--gutter {
+  margin: 0 0 0 30px;
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn--white-ghost {
+  border: 1px solid $white;
+  color: $white;
+  border-radius: 3px;
+
+  &:hover {
+    background: $white;
+    color: $black;
+  }
+}
+
+.btn--brown-ghost {
+  border: 1px solid $medium-brown;
+  color: $brown;
+  border-radius: 3px;
+
+  &:hover {
+    border: 1px solid $white;
+    background: $brown;
+    color: $white;
+  }
+}
+
+.btn--transparent-ghost {
+  font-family: $base-font;
+  color: $brown;
+  padding:0;
+  text-transform: uppercase;
+
+  &:hover {
+    font-weight: 800;
+  }
+}
+
+.btn--full-brown-ghost {
+  border: 1px solid $brown;
+  color: $brown;
+  border-radius: 3px;
+
+  &:hover {
+    border: 1px solid $white;
+    background: $brown;
+    color: $white;
+  }
+}
+
+.btn__animate {
+  min-width: initial;
+  position: relative;
+  border:none !important;
+  &:before {
+    content: '';
+  }
+  .top-l,.top-r,.bottom-l,.bottom-r {
+    display:inline-block;
+    position:absolute;
+  }
+  .top-l,.top-r {
+    top:0;
+    height:1px;
+    border-top:1px solid $brown;
+    width:16px;
+    -webkit-transition: 200ms width linear 400ms, 200ms height linear 200ms;
+    -moz-transition: 200ms width linear 400ms, 200ms height linear 200ms;
+    -ms-transition: 200ms width linear 400ms, 200ms height linear 200ms;
+    -o-transition: 200ms width linear 400ms, 200ms height linear 200ms;
+    transition: 200ms width linear 400ms, 200ms height linear 200ms;
+  }
+  .top-l {
+    border-left:1px solid $brown;
+    right:50%;
+  }
+  .top-r {
+    border-right:1px solid $brown;
+    left:50%;
+  }
+  .bottom-l,.bottom-r {
+    bottom:0;
+    height:1px;
+    width:0;
+    background:$brown;
+    -webkit-transition: 200ms width linear;
+    -moz-transition: 200ms width linear;
+    -ms-transition: 200ms width linear;
+    -o-transition: 200ms width linear;
+    transition: 200ms width linear;
+  }
+  .bottom-l {
+    left:0;
+  }
+  .bottom-r {
+    right:0;
+  }
+
+  &:hover {
+    .top-l,.top-r {
+      width:50%;
+      height:50px;
+      -webkit-transition: 200ms width linear, 200ms height linear 200ms;
+      -moz-transition: 200ms width linear, 200ms height linear 200ms;
+      -ms-transition: 200ms width linear, 200ms height linear 200ms;
+      -o-transition: 200ms width linear, 200ms height linear 200ms;
+      transition: 200ms width linear, 200ms height linear 200ms;
+    }
+    .bottom-l,.bottom-r {
+      width:50%;
+      -webkit-transition: 200ms width linear 400ms;
+      -moz-transition: 200ms width linear 400ms;
+      -ms-transition: 200ms width linear 400ms;
+      -o-transition: 200ms width linear 400ms;
+      transition: 200ms width linear 400ms;
+    }
+  }
+}
+.btn__animate.btn-left {
+  padding-left:0;
+  -webkit-transition: 200ms padding linear 400ms;
+  -moz-transition: 200ms padding linear 400ms;
+  -ms-transition: 200ms padding linear 400ms;
+  -o-transition: 200ms padding linear 400ms;
+  transition: 200ms padding linear 400ms;
+  .top-r {
+    left:0;
+    right:auto;
+    width:32px;
+  }
+  .top-l {
+    left:0;
+    width:0px;
+  }
+  &:hover {
+    padding-left:20px;
+    -webkit-transition: 200ms padding linear;
+    -moz-transition: 200ms padding linear;
+    -ms-transition: 200ms padding linear;
+    -o-transition: 200ms padding linear;
+    transition: 200ms padding linear;
+    .top-r {
+      width:100%;
+    }
+  }
+}
+
+.link {
+  color: inherit;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  
+  &:after {
+    content: "";
+    display: inline-block;
+  	width: 25px;
+  	height: 10px;
+    vertical-align: text-bottom;
+    font-weight: 700;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    @include translate(7px, -50%);
+  }
+  
+  &:hover {
+    
+    &:after {
+      @include translate(12px, -50%);
+    }
+  }
+  
+}
+
+
+@media screen and (min-width: 768px) {
+  .btn,
+  .link {
+    font-size: 14px;
+  }
+  
+  .link--sm {
+    font-size: 16px;
+  }
+  
+}

@@ -1,0 +1,33 @@
+.gallery-slider {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.gallery-slider__slide,
+.gallery-slider__figure,
+.gallery-slider__figure-img{
+  width: 100%;
+}
+
+.gallery-slider__slide {
+  position: relative;
+}
+
+.gallery-slider__nav {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.gallery-slider__nav--prev {
+  left: 14px;
+  z-index: 1;
+}
+
+.gallery-slider__nav--next {
+  right: 14px;
+}

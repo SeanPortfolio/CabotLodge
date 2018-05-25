@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.home-polaroid-section__container {
+    color: $brown;
+    padding: 0;
+}
+
+.home-polaroid-section--background {
+    background: #f1ede4;
+    padding: 65px;
+    outline: 2px solid $medium-brown;
+    outline-offset: -30px;
+}
+
+.home-polaroid-section--text {
+    font-size: 28px;
+    color: $medium-brown;
+}
+
+.home-image-section__container {
+    overflow: hidden;
+}
+
+.home-image-section--background {
+    z-index: 4;
+    display: block;
+    position: relative;
+    height: 575px;
+    width: 100%;
+    display: block;
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-filter: none;
+    filter: none;
+    background-size: cover;
+}
+
+.home-image-section--grunge {
+    position: absolute;
+    margin-top: -10px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.home-image-section--title {
+    position: relative;
+    text-transform: uppercase;
+    color: $white;
+    top: 235px;
+    font-weight: 200;
+
+    &:before {
+        content: '_____';
+        color: $white;
+        position: absolute;
+        top: -49px;
+        left: 0;
+        right: 0;
+    }
+}

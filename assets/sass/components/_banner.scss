@@ -1,0 +1,365 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the page banner component.
+// -----------------------------------------------------------------------------
+
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.home-page {
+  .banner {
+    height: 100vh;
+  }
+}
+
+.banner--has-bg {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.home-page {
+  .banner--has-bg {
+    background-attachment: fixed !important;
+  }
+}
+
+.banner__caption__heading {
+  text-align: center;
+}
+
+.banner--has-overlay {
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+  
+  &:before {
+    width: 100%;
+    background: rgba($black, 0.2);
+    z-index: 2;
+  }
+  
+  &:after {
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=1 );
+    width: 50%;
+    z-index: 3;
+    
+  }
+}
+
+.banner__img,
+.banner__slider-img {
+  position: relative;
+  z-index: 1;
+}
+
+.banner__slider__img {
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner__slider,
+.banner__slider .slick-list,
+.banner__slider .slick-track,
+.banner__slider-slide,
+.banner__slider-figure {
+  width: 100%;
+  height: 100%;
+}
+
+.banner__align-ctr {
+  color: $white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include translate();
+  width: 95%;
+  padding: 0 15px;
+  z-index: 4;
+  width: 95%;
+  max-width: 450px;
+  padding: 0 15px;
+}
+
+.banner-gallery {
+  display: none;
+}
+
+.banner__gallery--btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba($black, 0.8);
+  padding-top: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.banner__gallery--btn-text {
+  font-family: museo700;
+  font-weight: 100;
+  padding: 0;
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  width: 90px;
+}
+
+.banner__gallery--btn-text::before {
+  float:right;
+  width:calc(100% - 7em); 
+  height:2em;
+  content:'';
+}
+
+.banner__gallery--btn-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.banner__caption {
+  position: absolute;
+  z-index: 5;
+  bottom: 100px;
+  width: 100%;
+}
+
+.banner__photo-info {
+  position: absolute;
+  left: 0px;
+  bottom: 40px;
+  background: rgba($black, 0.8);
+  color: $white;
+  width: 350px;
+  z-index: 3;
+}
+
+.banner__photo-info__icon {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.banner__photo-info__text {
+  padding-left: 50px;
+  display: none;
+}
+
+.banner__gradient {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 155px;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.7)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
+}
+
+.banner__caption__heading,
+.banner__caption__heading-text {
+  font-family: $default-font;
+  font-weight: 200;
+  font-size: 27px;
+  color: $white;
+  opacity: 0.9;
+}
+
+.banner__overlay {
+  width:100%;
+  height:100%;
+  background-color:#000;
+  opacity:0.2;
+  z-index:5;
+}
+
+.banner__caption__heading {
+  font-weight: 300;
+}
+
+.banner__grunge {
+  position:absolute;
+  margin-top: -23px;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+.general-page {
+  .banner__grunge--heroshot {
+    position: absolute;
+    margin-top: -18px;
+    z-index: 3;
+
+    img{
+      max-width: 90%;
+    }
+  }
+}
+.home-page {
+  .banner__grunge--heroshot {
+    display: none;
+  }
+}
+
+.banner__scroll-to {
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  font-size: 38px;
+  width: 100%;
+  bottom: 0;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  left: 0;
+  right: 0;
+}
+
+.banner--has-overlay {
+  height: inherit;
+  overflow: hidden;
+  height: 100%;
+}
+
+.banner__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -200px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.banner__caption__txt {
+  color: $white;
+}
+
+.home-page {
+  .banner__video {
+    top: -50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .banner__grunge {
+    position: absolute;
+    margin-top: -18px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .home-page{
+    .banner {
+      height: 100vh;
+    }
+  }
+
+  .general-page{
+    .banner {
+      height: 70vh;
+    }
+  }
+  
+  .banner--sm {
+    height: 450px;
+  }
+
+  .banner--cover{
+    height: 90%;
+    height: -moz-calc(100vh - 70px);
+    height: -webkit-calc(100vh - 70px);
+    height: calc(100vh - 70px);
+  }
+  
+  .banner__img,
+  .banner__slider-img {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    @include translate();
+  }
+  
+} 
+
+@media screen and (min-width: 992px) {
+
+  .banner__align-ctr {
+    max-width: none;
+  }
+
+  .banner__form {
+    margin: -45px 0;
+  }
+
+  .banner__booking-panel {
+    margin: -25px 0;
+  }
+  
+}
+
+@media screen
+  and (min-width: 1200px) 
+  and (max-width: 1600px) {
+
+  .map-canvas {
+    margin: 60px;
+  }
+
+  .banner__form {
+    margin: 30px 0;
+  }
+
+  .banner__booking-panel {
+    margin: 85px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner__logo-banner {
+    padding: 0 10px;
+  }
+  
+  .banner--sm {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner__align-ctr {
+    max-width: 450px;
+  }
+}
